@@ -1,0 +1,7 @@
+.env
+generated_wallet*.txt
+wallet*.txt
+package-lock.json
+test-ledger/
+.DS_Store
+node_modules/
