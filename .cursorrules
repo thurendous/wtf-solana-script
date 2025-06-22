@@ -1,0 +1,84 @@
+# Cursor AI Rules for Solana TypeScript Project
+
+## Code Style & Quality
+- Use TypeScript with strict type checking
+- Follow consistent naming conventions: camelCase for variables/functions, PascalCase for classes/types
+- Use meaningful variable and function names that describe their purpose
+- Keep functions small and focused on a single responsibility
+- Use async/await instead of Promise chains
+- Always use const for variables that don't change, let for variables that do
+- Use template literals instead of string concatenation
+- Include proper JSDoc comments for public functions and complex logic
+
+## Solana-Specific Rules
+- Always handle connection errors gracefully with try-catch blocks
+- Use proper commitment levels (confirmed, finalized) based on use case
+- Include proper error handling for transaction failures
+- Use environment variables for sensitive data like private keys
+- Always validate public keys and addresses before using them
+- Include transaction confirmation checks for critical operations
+- Use proper units (SOL vs Lamports) and clearly document which unit is being used
+
+## Security Best Practices
+- Never hardcode private keys or sensitive information
+- Always use environment variables for configuration
+- Validate all inputs before processing
+- Use proper error messages that don't leak sensitive information
+- Include rate limiting considerations for RPC calls
+- Always use secure random number generation for key creation
+
+## Error Handling
+- Use try-catch blocks for all async operations
+- Provide meaningful error messages to users
+- Log errors appropriately without exposing sensitive data
+- Handle network failures and retry logic where appropriate
+- Validate function parameters and throw descriptive errors for invalid inputs
+
+## Performance & Efficiency
+- Cache connection objects when possible
+- Use batch operations for multiple related calls
+- Implement proper timeout handling for network operations
+- Avoid unnecessary API calls by caching results when appropriate
+- Use appropriate RPC endpoints for different operations
+
+## Code Organization
+- Keep related functionality in separate files
+- Use barrel exports (index.ts) for clean imports
+- Group imports: built-in modules, third-party, local modules
+- Use consistent file naming conventions
+- Keep configuration separate from business logic
+
+## Documentation
+- Include README.md with setup instructions
+- Document environment variables required
+- Provide examples of how to use each script
+- Include comments explaining complex Solana concepts
+- Document any custom types or interfaces
+
+## Testing & Development
+- Include error scenarios in examples
+- Test with different network conditions
+- Use descriptive console.log messages for debugging
+- Include proper cleanup for resources when needed
+- Test with minimal account balances to handle edge cases
+
+## Dependencies & Imports
+- Use specific versions in package.json to avoid breaking changes
+- Only import what you need to keep bundle size small
+- Keep dependencies up to date but test thoroughly after updates
+- Use proper type definitions for all dependencies
+
+## Environment & Configuration
+- Use dotenv for environment variable management
+- Provide .env.example file with required variables
+- Include validation for required environment variables
+- Use different configurations for different networks (devnet, testnet, mainnet)
+
+## Communication Style
+- Provide clear, step-by-step explanations
+- Include code examples that can be run immediately
+- Explain Solana concepts in simple terms
+- Use Chinese comments when helpful for understanding
+- Always test suggested code before providing it
+- Include multiple approaches when there are different ways to solve a problem 
+

@@ -5,10 +5,14 @@ import bs58 from "bs58";
 import fs from "fs";
 
 const main = async () => {
+    // 生成一个新钥匙
     const wallet = Keypair.generate();
 
+    // 输出公钥匙
     console.log(`Public Key: ${wallet.publicKey.toBase58()}`);
+    // 获取私钥
     console.log(`private key: ${wallet.secretKey}`);
+    // 输出私钥，使用bs58编码
     console.log(`Private Key: ${bs58.encode(wallet.secretKey)}`);
 
     const privateKey58 = bs58.encode(wallet.secretKey)
