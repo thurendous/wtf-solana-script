@@ -11,7 +11,7 @@ const connection = new Connection(clusterApiUrl("devnet"), "confirmed");
 console.log(`API URL: ${clusterApiUrl("devnet")}`);
 
 // get the public key from .env file using private key
-const privateKey = process.env.GENERATED_WALLET_001_PK;
+const privateKey = process.env.GENERATED_WALLET_001_PK as string;
 if (!privateKey) {
     throw new Error("GENERATED_WALLET_001_PK is not set");
 }
